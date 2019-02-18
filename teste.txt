@@ -4,6 +4,18 @@ https://mega.co.nz/#F!r0VFha7L!pAxhe_z635O0Mkab0YRduA
 
 
 cd C:\oraclexe\app\oracle\product\11.2.0\server\bin.
+______________________________________________
 
+primeiras instruçoes
 
+select titulo,preco,isbn from tb_livro
 
+select * from tb_livro
+
+select nome from tb_autor
+
+____________________________________________
+
+formatação
+
+select titulo as "Titulo do Livro", edicao as "Edicao", preco as "Preco", qtde_estoque as "Estoque", preco+qtde_estoque as "Soma" from tb_livro
