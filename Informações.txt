@@ -22,6 +22,21 @@ select titulo as "Titulo do Livro", edicao as "Edicao", preco as "Preco", qtde_e
 
 
 _________________________________________
+WHERE - COMBINAÇÕES DE OBJETOS
+
+select * from tb_funcionario where SEXO= 'F' 
+
+SELECT * FROM TB_LIVRO WHERE PRECO > 10
+
+select 'Não Editora Campos ' as EDITORA, id_editora, isbn, TITULO, preco from tb_livro where id_editora != 1
+
+___________________________________________
+
+BUSCA DE DATAS
+
+SELECT * FROM TB_PEDIDO WHERE DATA_PEDIDO = '05/01/10'
+__________________________________________
+
 
 Concatenar "||"
 
@@ -37,6 +52,92 @@ desc TB_ITENS_PEDIDO
 
 ESTRUTURA DA TABELA 
 ________________________________________________
+ BETWEEN ... AND
 
+SELECT * FROM TB_LIVRO WHERE PRECO BETWEEN 5 AND 15
+
+___________________________
+IN ---> EQUIVALO AO 'OR'
+SELECT * FROM TB_LOG WHERE USUARIO IN ('TREINAMENTO', 'GRIFAS', 'DDD')
+
+__________________________
+LIKE
+
+select * from TB_FUNCIONARIO where nome like '%ão%'
+_________________________
+NULL
+
+select *from TB_LIVRO where preco is null
+
+select *from TB_LIVRO where preco is NOT null
+
+______________________________
+OR
+select *from TB_LIVRO where preco > 50 or edicao = 10
+________________
+NOT
+select * from  TB_LOTACAO where sigla not in ('DPA','GSD','COEX1')
+
+_________________
+PARENTESES PARA SELECIONAR O QUE VC QUER FAZER PRIMEIRO
+
+SELECT * FROM TB_LIVRO WHERE PRECO > 50 AND (EDICAO=10 OR ID_EDITORA=1)
+________________
+
+ORDER BY
+SELECT * FROM TB_LIVRO ORDER BY PRECO, QTDE_ESTOQUE
+
+select * from tb_livro order by QTDE_ESTOQUE desc
+
+SELECT TITULO , PRECO, QTDE_ESTOQUE FROM TB_LIVRO ORDER BY 3,1
+________________
+& COMERCIAL
+
+SELECT * FROM TB_LIVRO WHERE PRECO > &PRECO ORDER BY &&CLASSIF;
+
+____________________________
+INSERT - ENSERRIR TABELA DE FORA
+
+INSERT INTO TB_LIVRO (ID_LIVRO, ISBN, TITULO, EDICAO, ID_EDITORA, QTDE_ESTOQUE)
+SELECT 15 ,ISBN, TITULO, EDICAO,ID_EDITORA, QTDE_ESTOQUE FROM TB_LIVRO WHERE ID_LIVRO=14
+
+INSERT INTO TB_FUNCIONARIO (ID_FUNCIONARIO, NOME, SEXO) VALUES (&IDFUNC, '&NOMEFUNC', '&SEXOFUNC');
+
+
+SELECT * FROM TB_LIVRO WHERE PRECO > &PRECO ORDER BY &PRECO;
+
+
+________________________________
+UPDATE --> ATUALIZAR TABELA 
+
+UPDATE TB_LIVRO SET PRECO=80, EDICAO=3 WHERE ID_LIVRO=15
+
+SUBConsulta
+UPDATE TB_LIVRO  SET PRECO=(SELECT PRECO FROM TB_LIVRO WHERE TITULO='Redes de computadores') where preco between 10 and 15 
+
+______________________________
+DELETE
+
+delete from tb_log
+where id_log=298
+
+_____________________________________
+COMMIT OU ROLLBACK
+
+
+insert into tb_funcionario (id_funcionario, sexo, nome) value (15 ,'F', 'xxxxxx');
+
+insert into tb_funcionario (id_funcionario, sexo, nome) value (16 ,'F', 'xxxxxx');
+
+commit
+
+
+insert into tb_funcionario (id_funcionario, sexo, nome) value (15 ,'F', 'xxxxxx');
+
+insert into tb_funcionario (id_funcionario, sexo, nome) value (16 ,'F', 'xxxxxx');
+
+rollback
+
+______________________________________
 
 

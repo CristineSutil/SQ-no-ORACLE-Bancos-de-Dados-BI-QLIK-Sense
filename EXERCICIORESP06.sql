@@ -1,0 +1,25 @@
+REM INSERTING into EXPORT_TABLE
+SET DEFINE OFF;
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values (null,'Roma','00989');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values (null,'Venice','10934');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Tokyo Prefecture','Tokyo','1689');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values (null,'Hiroshima','6823');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Texas','Southlake','26192');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('California','South San Francisco','99236');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('New Jersey','South Brunswick','50090');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Washington','Seattle','98199');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Ontario','Toronto','M5V 2L7');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Yukon','Whitehorse','YSW 9T2');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values (null,'Beijing','190518');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Maharashtra','Bombay','490231');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('New South Wales','Sydney','2901');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values (null,'Singapore','540198');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values (null,'London',null);
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Oxford','Oxford','OX9 9ZB');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Manchester','Stretford','09629850293');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Bavaria','Munich','80925');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Sao Paulo','Sao Paulo','01307-002');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Geneve','Geneva','1730');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('BE','Bern','3095');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Utrecht','Utrecht','3029SK');
+Insert into EXPORT_TABLE (ESTADO,CIDADE,CEP) values ('Distrito Federal,','Mexico City','11932');

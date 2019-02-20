@@ -1,0 +1,21 @@
+REM INSERTING into EXPORT_TABLE
+SET DEFINE OFF;
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('AD_PRES','President','20080');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('AD_VP','Administration Vice President','15000');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('AD_ASST','Administration Assistant','3000');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('FI_MGR','Finance Manager','8200');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('FI_ACCOUNT','Accountant','4200');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('AC_MGR','Accounting Manager','8200');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('AC_ACCOUNT','Public Accountant','4200');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('SA_MAN','Sales Manager','10000');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('SA_REP','Sales Representative','6000');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('PU_MAN','Purchasing Manager','8000');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('PU_CLERK','Purchasing Clerk','2500');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('ST_MAN','Stock Manager','5500');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('ST_CLERK','Stock Clerk','2008');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('SH_CLERK','Shipping Clerk','2500');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('IT_PROG','Programmer','4000');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('MK_MAN','Marketing Manager','9000');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('MK_REP','Marketing Representative','4000');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('HR_REP','Human Resources Representative','4000');
+Insert into EXPORT_TABLE (ID_CARGO,CARGO,SALARIO_MINIMO) values ('PR_REP','Public Relations Representative','4500');
