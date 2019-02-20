@@ -1,0 +1,42 @@
+http://mega.co.nz/#f!rovfha7l!paxhe_z635o0mkab0yrdua
+
+https://mega.co.nz/#F!r0VFha7L!pAxhe_z635O0Mkab0YRduA
+
+
+cd C:\oraclexe\app\oracle\product\11.2.0\server\bin.
+______________________________________________
+
+primeiras instruçoes
+
+select titulo,preco,isbn from tb_livro
+
+select * from tb_livro
+
+select nome from tb_autor
+
+____________________________________________
+
+formatação
+
+select titulo as "Titulo do Livro", edicao as "Edicao", preco as "Preco", qtde_estoque as "Estoque", preco+qtde_estoque as "Soma" from tb_livro
+
+
+_________________________________________
+
+Concatenar "||"
+
+select 'Nome do Autor ' || NOME from tb_autor
+
+select 'Nome do Autor ' || NOME AS CAMPO_NOME from tb_autor
+
+select 'Nome do Autor ' || NOME || 'Data de Nascimento' DATA_NASCIMENTO AS CAMPO_NOME from tb_autor
+____________________________________________
+ DESC[RIBE]
+
+desc TB_ITENS_PEDIDO
+
+ESTRUTURA DA TABELA 
+________________________________________________
+
+
+
