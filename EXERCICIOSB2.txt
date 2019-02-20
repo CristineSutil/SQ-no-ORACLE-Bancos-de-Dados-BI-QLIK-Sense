@@ -1,0 +1,55 @@
+QUESTOES B02
+
+1.      Selecione os nomes de funcionários e salários, ordenados do maior para o menor, considerando quem ganha mais de 12000 reais;
+
+RESPOSTA:
+SELECT PRIMEIRO_NOME || ' ' || ULTIMO_NOME AS NOME,
+SALARIO FROM funcionarios
+WHERE SALARIO>12000
+ORDER BY SALARIO DESC;
+    
+
+2.      Selecione o nome e ultimo nome e salário dos funcionários que não tem salários entre 5000 reais e 12000 reais, para assim identificar os maiores e menores salários;
+
+RESPOSTA:
+SELECT PRIMEIRO_NOME ,ULTIMO_NOME,
+SALARIO FROM funcionarios
+WHERE SALARIO BETWEEN 5000 AND 12000
+   
+
+3.      Listar os funcionários que estão nos departamentos 20 ou 50 ordernados pelo primeiro nome;
+
+RESPOSTA:
+SELECT * FROM funcionarios
+WHERE ID_DEPARTAMENTO IN (20,50)
+order by PRIMEIRO_NOME
+    
+
+4.      Modificar a questão 2, trazendo os funcionários que possuem salários entre 5000 reais E 12000 reais e 
+que além disto estejam no departamento 20 ou 50. Imprima os cabeçalhos como “Nome” e “Salário Atual”;
+
+RESPOSTA:
+SELECT PRIMEIRO_NOME AS "Nome", SALARIO "Salário Atual" FROM funcionarios
+WHERE (SALARIO BETWEEN 5000 AND 12000) AND
+ID_DEPARTAMENTO IN (20,50)
+   
+
+5.      Selecione os funcionários que não recebem comissão. Imprima o nome e sobrenome;
+
+RESPOSTA:
+SELECT PRIMEIRO_NOME ,ULTIMO_NOME FROM funcionarios
+where pct_comissao is null
+    
+
+6.      Selecione nome, data de admissão e salário dos funcionários admitidos entre os MESES DE 03/2005 e 07/2005;
+
+RESPOSTA:
+SELECT PRIMEIRO_NOME ,dt_admissao, salario  FROM funcionarios
+where dt_admissao between '01-03-05' and '01-07-05'
+    
+
+7.      Construa uma consulta utilizando uma variável de substituição para que o usuário entre com um valor de salário que sirva de base para listar a relação de funcionários que recebam mais que o valor informado.
+
+RESPOSTA:
+select * from funcionarios
+where salario > &sal_info
