@@ -1,0 +1,127 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=Cp1252">
+<!-- base href="http://apexdev.us.oracle.com:7778/pls/apx11w/" -->
+<style type="text/css">
+table {
+background-color:#F2F2F5;
+border-width:1px 1px 0px 1px;
+border-color:#C9CBD3;
+border-style:solid;
+}
+td {
+color:#000000;
+font-family:Tahoma,Arial,Helvetica,Geneva,sans-serif;
+font-size:9pt;
+background-color:#EAEFF5;
+padding:8px;
+background-color:#F2F2F5;
+border-color:#ffffff #ffffff #cccccc #ffffff;
+border-style:solid solid solid solid;
+border-width:1px 0px 1px 0px;
+}
+th {
+font-family:Tahoma,Arial,Helvetica,Geneva,sans-serif;
+font-size:9pt;
+padding:8px;
+background-color:#CFE0F1;
+border-color:#ffffff #ffffff #cccccc #ffffff;
+border-style:solid solid solid none;
+border-width:1px 0px 1px 0px;
+white-space:nowrap;
+}
+</style>
+<script type="text/javascript">
+window.apex_search = {};
+apex_search.init = function (){
+	this.rows = document.getElementById('data').getElementsByTagName('TR');
+	this.rows_length = apex_search.rows.length;
+	this.rows_text =  [];
+	for (var i=0;i<apex_search.rows_length;i++){
+        this.rows_text[i] = (apex_search.rows[i].innerText)?apex_search.rows[i].innerText.toUpperCase():apex_search.rows[i].textContent.toUpperCase();
+	}
+	this.time = false;
+}
+
+apex_search.lsearch = function(){
+	this.term = document.getElementById('S').value.toUpperCase();
+	for(var i=0,row;row = this.rows[i],row_text = this.rows_text[i];i++){
+		row.style.display = ((row_text.indexOf(this.term) != -1) || this.term  === '')?'':'none';
+	}
+	this.time = false;
+}
+
+apex_search.search = function(e){
+    var keycode;
+    if(window.event){keycode = window.event.keyCode;}
+    else if (e){keycode = e.which;}
+    else {return false;}
+    if(keycode == 13){
+		apex_search.lsearch();
+	}
+    else{return false;}
+}</script>
+</head><body onload="apex_search.init();">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td><input type="text" size="30" maxlength="1000" value="" id="S" onkeyup="apex_search.search(event);" /><input type="button" value="Search" onclick="apex_search.lsearch();"/> 
+</td></tr>
+</tbody></table>
+<br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>	<th>TITULO</th>
+	<th>PRECO</th>
+	<th>QTDE_ESTOQUE</th>
+</tr>
+<tbody id="data">
+
+	<tr>
+<td>Interface Homem-Máquina</td>
+<td align="right">15</td>
+<td align="right">10</td>
+	</tr>
+	<tr>
+<td>Pai Rico, Pai Pobre</td>
+<td align="right">45,99</td>
+<td align="right">23</td>
+	</tr>
+	<tr>
+<td>O Rei e o Réu</td>
+<td align="right">43</td>
+<td align="right">35</td>
+	</tr>
+	<tr>
+<td>Curso SQL Oracle</td>
+<td align="right">&nbsp;</td>
+<td align="right">50</td>
+	</tr>
+	<tr>
+<td>Inglês em MENOS DE 1 ANO</td>
+<td align="right">100,8</td>
+<td align="right">55</td>
+	</tr>
+	<tr>
+<td>Redes de Computadores</td>
+<td align="right">20</td>
+<td align="right">60</td>
+	</tr>
+	<tr>
+<td>Harry Potter</td>
+<td align="right">50,6</td>
+<td align="right">78</td>
+	</tr>
+	<tr>
+<td>55 Tons de Cinza</td>
+<td align="right">78,9</td>
+<td align="right">123</td>
+	</tr>
+	<tr>
+<td>Marketing Digital</td>
+<td align="right">455,98</td>
+<td align="right">325</td>
+	</tr>
+	<tr>
+<td>Banco de Dados</td>
+<td align="right">10</td>
+<td align="right">407</td>
+	</tr>
+</tbody></table><!-- SQL:
+SELECT TITULO , PRECO, QTDE_ESTOQUE FROM TB_LIVRO ORDER BY 3,1--></body></html>
